@@ -1,0 +1,1058 @@
+/*
+RESET
+BASIC UTILITIES & FORMATTING
+TYPOGRAPHY
+FORM RESETS
+*/
+/* RESET (based on Josh Comeau's Custom Reset) */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+}
+
+img,
+picture,
+video,
+canvas,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+#root,
+#__next,
+#app {
+    isolation: isolate;
+}
+
+img {
+    border-style: none;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+/* -- UTILITIES  --------------------------------------------------------- */
+[hidden],
+.hidden,
+.hide {
+    display: none;
+}
+
+.show,
+.shown {
+    display: block;
+}
+
+.for-sr {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    left: -1900px;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+small {
+    font-size: 0.8rem;
+}
+
+sub,
+sup {
+    font-size: 0.75rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25rem;
+}
+
+sup {
+    top: -0.5rem;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+/* --TYPOGRAPHY   --------------------------------------------------------- */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    margin: 1rem 0;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1rem;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1rem;
+}
+
+/* --FORM RESETS   ---------------------------------------------------- */
+textarea {
+    overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    text-transform: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button;
+    all: unset;
+    /* Reset all inherited and default styles */
+    display: inline-block;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+button:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus {
+    outline: 2px dotted black;
+    outline-offset: 2px;
+}
+
+/*
+SKIP
+TABS, VANILLA
+EXTERNAL INCS
+*/
+/* --SKIP FUNCTION   ------------------------------------------------------- */
+#skip a,
+#skip-nav a {
+    background: black none repeat scroll 0 0;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 1px solid black;
+    color: white;
+    left: 45%;
+    padding: 8px;
+    position: absolute;
+    top: -48px;
+    -webkit-transition: top 1s ease-out 0s, background 1s linear 0s;
+    transition: top 1s ease-out 0s, background 1s linear 0s;
+    z-index: 100;
+    font-size: 0.9rem;
+}
+
+#skip a:hover,
+#skip-nav a:hover {
+    text-decoration: underline;
+}
+
+#skip a:focus,
+#skip-nav a:focus {
+    background: #000 none repeat scroll 0 0;
+    outline: 0 none;
+    top: 0;
+    -webkit-transition: top 0.2s ease-in 0s, background 0.5s linear 0s;
+    transition: top 0.2s ease-in 0s, background 0.5s linear 0s;
+    text-decoration: underline;
+}
+
+
+/* --PALETTE   ------------------------------------------------------------ */
+/*
+GLOBALS
+PALETTE 
+MIXINS
+TYPOGRAPHY - local
+LINKS
+LAYOUT CONTAINERS
+HEADER
+MAIN NAV
+FOOTER
+MAIN CONTENT 
+CONTENT BLOCKS 
+PAGINATION
+ALERTS - local
+DIALOGS - local 
+TABLES - local 
+FORM ELEMENTS - local 
+*/
+/* --GLOBALS   ------------------------------------------------------------ */
+body {
+    font-family: "Nunito Sans", Arial, sans-serif;
+}
+
+/* font size keywords */
+a img {
+    cursor: pointer;
+}
+
+/* --MIXINS   ------------------------------------------------------------- */
+/* --TYPOGRAPHY   ---------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #13294B;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+h5,
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+    display: block;
+}
+
+/* --LINKS   --------------------------------------------------------------- */
+a:link {
+    text-decoration: none;
+    border-bottom: 1px dotted #166DB6;
+    color: #166DB6;
+}
+
+a:visited {
+    color: #1C0C5F;
+}
+
+a:hover,
+a:focus {
+    border-bottom-style: solid;
+}
+
+a:focus,
+button:focus,
+.btn:focus,
+.likebtn:focus {
+    outline: 2px dotted #0E2549;
+    outline-offset: 2px;
+    border-radius: 1px;
+}
+
+a.btn:link,
+a.likebtn:link,
+a.btn:visited,
+a.likebtn:visited {
+    color: #fff;
+}
+
+.external::after {
+    content: url(../img/external-link.png);
+}
+
+a.boldlink {
+    border-bottom-color: transparent;
+    font-weight: 700;
+}
+
+a.boldlink:hover,
+a.boldlink:focus {
+    border-bottom-color: #005195;
+}
+
+a.boldlink-btn:link,
+a.boldlink-btn:visited {
+    padding: 0.425rem 1.25rem;
+    border-radius: 3px;
+    color: #005195;
+    background-color: transparent;
+    border-bottom: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+a.boldlink-btn:link:hover,
+a.boldlink-btn:link:focus,
+a.boldlink-btn:visited:hover,
+a.boldlink-btn:visited:focus {
+    background-color: #EBF7FF;
+    text-decoration: underline;
+}
+
+a.boldlink-btn:link:focus,
+a.boldlink-btn:visited:focus {
+    outline: 2px dotted black;
+    outline-offset: 3px;
+}
+
+/* --LAYOUT CONTAINERS   --------------------------------------------------- */
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 94rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+
+
+/* --HEADER   -------------------------------------------------------------- */
+header {
+    /*background-color: #F0F4F5;*/
+    padding: 0.5rem 0 0.3rem 0;
+}
+
+
+/* --MAIN CONTENT   -------------------------------------------------------- */
+main {
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 2rem 0;
+}
+
+#main:focus {
+    outline: none;
+}
+
+/* --TABLES   -------------------------------------------------------------- */
+.app-table-border {
+    border: 1px solid #B0B8BA;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1rem 1rem 1.5rem 1rem;
+}
+
+.app-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.app-table caption {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    left: -1900px;
+}
+
+.app-table th,
+.app-table td {
+    padding: 0.4rem 0.6rem;
+}
+
+.app-table thead tr {
+    border-bottom: 1px solid gray;
+}
+
+.app-table th {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #666C76;
+}
+
+.app-table a:link {
+    border-bottom-color: transparent;
+    font-weight: 700;
+    color: #0070cf;
+}
+
+.app-table a:hover,
+.app-table a:focus {
+    color: #005195;
+    border-bottom-color: #005195;
+}
+
+.app-table tr:nth-child(even) {
+    background-color: #F4F7F7;
+}
+
+.app-table th.status-col {
+    padding-left: 1.5rem;
+}
+
+@media (max-width: 960px) {
+    th {
+        display: none;
+    }
+
+    th.rowhead {
+        display: block;
+    }
+
+    td {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    thead {
+        border-bottom: none;
+    }
+
+    td:before,
+    th.rowhead:before {
+        content: attr(data-cell) " ";
+        font-weight: 700;
+    }
+
+    td:first-child {
+        padding-top: 1rem;
+    }
+
+    td:last-child {
+        padding-bottom: 1rem;
+    }
+}
+
+.ch-table-name .uin {
+    display: block;
+}
+
+.ch-masterlist td {
+    vertical-align: middle;
+}
+
+.ch-masterlist td .del-note {
+    margin-bottom: 0;
+}
+
+/* --FORM ELEMENTS   ------------------------------------------------------- */
+.input-xsm,
+.input-sm,
+.input-med,
+.input-lg,
+.input-xlg {
+    width: 100%;
+}
+
+.input-xsm {
+    max-width: 5rem;
+}
+
+.input-sm {
+    max-width: 10rem;
+}
+
+.input-med {
+    max-width: 20rem;
+}
+
+.input-lg {
+    max-width: 32rem;
+}
+
+.input-xlg {
+    max-width: 50rem;
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: #657986;
+}
+
+.instruction {
+    font-style: italic;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #115B8D;
+}
+
+.form-ov {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.searchpr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.searchpr input[type=submit] {
+    margin-left: -3px;
+}
+
+.maj-option {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.btn,
+.likebtn {
+    background-color: #166DB6;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.425rem 1.25rem;
+    border-radius: 3px;
+}
+
+.btn:hover,
+.likebtn:hover,
+.btn:focus,
+.likebtn:focus {
+    background-color: #005195;
+}
+
+.btn:focus,
+.likebtn:focus {
+    outline: 2px dotted black;
+    outline-offset: 3px;
+}
+
+.sec-btn {
+    background-color: #13294B;
+}
+
+.sec-btn:hover,
+.sec-btn:focus {
+    background-color: black;
+}
+
+.interiorbtn {
+    background-color: #75C7FF;
+    color: #0E2549;
+}
+
+.interiorbtn:hover,
+.interiorbtn:focus {
+    background-color: #115B8D;
+    color: #fff;
+}
+
+.btn.cnl,
+.cnl.likebtn {
+    background-color: #F0F4F5;
+    color: #166DB6;
+}
+
+.btn.cnl:hover,
+.cnl.likebtn:hover,
+.btn.cnl:focus,
+.cnl.likebtn:focus {
+    color: #005195;
+    background-color: rgba(114, 211, 246, 0.3);
+}
+
+.hollow {
+    background-color: transparent;
+    border: 1px solid #166DB6;
+    border-bottom-style: solid;
+}
+
+.subtle,
+a:link.subtle {
+    background-color: transparent;
+    border: 1px solid #166DB6;
+    border-bottom-style: solid;
+}
+
+.subtle:hover,
+a:link.subtle:hover {
+    background-color: #E4F0F3;
+}
+
+fieldset {
+    border: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset legend {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: -2px;
+}
+
+textarea {
+    min-height: 70px;
+}
+
+.likebtn:hover,
+.likebtn:focus {
+    border-bottom-color: transparent !important;
+}
+
+.textbtn,
+.textbtn-dark,
+.likebtn {
+    background-color: transparent;
+    color: #166DB6;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.textbtn:hover,
+.textbtn-dark:hover,
+.textbtn:focus,
+.textbtn-dark:focus,
+.likebtn:hover,
+.likebtn:focus {
+    color: #005195;
+    background-color: #EBF7FF;
+}
+
+.textbtn:hover span,
+.textbtn-dark:hover span,
+.textbtn:focus span,
+.textbtn-dark:focus span,
+.likebtn:hover span,
+.likebtn:focus span {
+    text-decoration: underline;
+}
+
+.textbtn-dark {
+    color: #005195;
+}
+
+.textbtn-dark:hover,
+.textbtn-dark:focus {
+    text-decoration: underline;
+}
+
+select {
+    height: 2.4375rem;
+    margin: 0;
+    padding: 0.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #657986;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%28114, 114, 114%29"></polygon></svg>');
+    background-origin: content-box;
+    background-position: right -1rem center;
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    padding-right: 1.5rem;
+    -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+    transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+}
+
+.sorter {
+    width: auto;
+    font-size: 0.9rem;
+    border-color: #1B93E4;
+}
+
+input[type=text],
+input[type=search],
+input[type=password] {
+    height: 2.4375rem;
+    margin: 0;
+    padding: 0.5rem;
+    border: 1px solid #657986;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+    transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+}
+
+.interior-search {
+    display: inline-block;
+    background-color: #166DB6;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 28 28"%3E%3Cpath fill="%23FFF" d="M11.89 0c-2.51.001-4.96.798-6.99 2.276C2.87 3.753 1.36 5.836.58 8.226-.19 10.616-.19 13.19.58 15.58c.78 2.39 2.29 4.472 4.32 5.949 2.03 1.476 4.48 2.271 6.99 2.27 2.51 0 4.96-.796 6.99-2.27l5.93 5.927c.47.472 1.16.656 1.8.485.64-.173 1.14-.676 1.31-1.32.17-.645-.01-1.33-.48-1.8l-5.93-5.926c1.73-2.38 2.52-5.32 2.21-8.25-.31-2.93-1.69-5.64-3.88-7.61C18.45 1.08 15.61 0 12.67 0H11.89Zm0 20.066c-2.17 0-4.25-.86-5.77-2.392C4.59 16.142 3.73 14.065 3.73 11.9c0-2.166.86-4.243 2.39-5.774C7.65 4.594 9.73 3.733 11.89 3.733c2.17 0 4.25.86 5.77 2.392 1.53 1.532 2.39 3.609 2.39 5.774 0 2.165-.86 4.241-2.39 5.773-1.53 1.532-3.6 2.392-5.77 2.392Z"%3E%3C/path%3E%3C/svg%3E');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2.4375rem;
+    width: 36px;
+    font-weight: 600;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-left: -2px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.interior-search:hover,
+.interior-search:focus {
+    background-color: #0070cf;
+}
+
+.quest {
+    border-left: 4px solid transparent;
+    padding: 0.5rem 0 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.quest>label {
+    display: block;
+    font-weight: 600;
+}
+
+.quest+.quest {
+    padding-top: 1rem;
+}
+
+.featured-quest {
+    border-left: 6px solid #657986;
+    margin: 1.5rem 0;
+    background-color: #F0F4F5;
+    padding: 1.5rem 3rem 2rem 2rem;
+    display: inline-block;
+}
+
+.pr label {
+    display: inline-block;
+}
+
+.formactionbar {
+    padding-left: calc(4px + 0.75rem);
+    padding: 1rem 0 2rem 0;
+}
+
+.formactionbar .btn,
+.formactionbar .likebtn {
+    font-size: 1.125rem;
+    padding: 0.65rem 1.4rem;
+}
+
+.formactionbar .btn+.btn,
+.formactionbar .likebtn+.btn,
+.formactionbar .btn+.likebtn,
+.formactionbar .likebtn+.likebtn {
+    margin-left: 1.25rem;
+}
+
+.majorchoice {
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+
+.err-summary {
+    border-left: 4px solid #E0002F;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: rgba(234, 216, 216, 0.4);
+    color: #AD0024;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.err-summary p {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.error.quest {
+    border-color: #E0002F;
+}
+
+.error label {
+    font-weight: 700;
+}
+
+.error input,
+.error select {
+    border-color: #E0002F;
+}
+
+.err-field-msg {
+    color: #AD0024;
+    font-weight: 700;
+}
+
+.c-fields {
+    /*style wrapper to give some space*/
+    /*style label to give some more space*/
+    /*style and hide original radio*/
+    /*position new radio*/
+    /*radio pseudo element styles*/
+    /*reveal circle for 'on' state*/
+    /*focus styles*/
+    /*style and hide original checkbox*/
+    /*position new box*/
+    /*create check element*/
+}
+
+.c-fields legend {
+    font-weight: 600;
+}
+
+.c-fields .pr {
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.c-fields .pr label {
+    display: inline-block;
+    padding: 2px 1rem 0.5rem 40px;
+}
+
+.c-fields .pr input[type=radio] {
+    height: 28px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+}
+
+.c-fields .pr input[type=radio]+label::before {
+    border: 1px solid #657986;
+    content: "";
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+    border-radius: 50%;
+}
+
+.c-fields .pr input[type=radio]:focus+label::before,
+.c-fields .pr input[type=checkbox]:focus+label::before {
+    outline: 2px dotted #0E2549;
+    outline-offset: 2px;
+}
+
+.c-fields .pr input[type=radio]+label::after {
+    content: "";
+    opacity: 0;
+    border: 8px solid #1B93E4;
+    border-radius: 50%;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.c-fields .pr input:checked+label::after {
+    opacity: 1;
+}
+
+.c-fields .pr input:focus+label::before {
+    -webkit-box-shadow: 0 0 0 3px #A3D5F6;
+    box-shadow: 0 0 0 3px #A3D5F6;
+    outline: 3px solid transparent;
+    /* For Windows high contrast mode. */
+}
+
+.c-fields .pr input[type=checkbox] {
+    height: 28px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+}
+
+.c-fields .pr input[type=checkbox]+label::before {
+    border: 1px solid #657986;
+    content: "";
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+    border-radius: 2px;
+}
+
+.c-fields .pr input[type=checkbox]:disabled+label {
+    color: #666C76;
+}
+
+.c-fields .pr input[type=checkbox]:disabled+label::before {
+    background-color: #F0F4F5;
+    border-color: rgb(165, 165, 165);
+}
+
+.c-fields .pr input[type=checkbox]+label::after {
+    content: "";
+    border: 4px solid #1B93E4;
+    border-left: 0;
+    border-top: 0;
+    height: 20px;
+    left: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    width: 11px;
+}
+
+.c-fields .pr input[type=checkbox]:checked+label::after {
+    opacity: 1;
+}
+
+/* smaller version of checkboxes */
+.c-fields.c-fields-sm .pr input[type=checkbox]+label::before {
+    border: 1px solid #657986;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    border-radius: 2px;
+}
+
+.c-fields.c-fields-sm .pr label {
+    padding-left: 30px;
+}
+
+.c-fields.c-fields-sm .pr input[type=checkbox]+label::after {
+    height: 16px;
+    left: 6px;
+    top: 0;
+    width: 9px;
+}
